@@ -1,0 +1,4 @@
+-I./generic_netlink_0/kernelspace
+-I./generic_netlink_1/kernelspace
+-I/usr/include/libnl3
+-I./hellogenl

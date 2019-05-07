@@ -1,10 +1,18 @@
+helloworld-cpp-program
+
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
 # Prerequisites
 *.d
-
-.deps/
-Makefile
-config.log
-config.status
 
 # Object files
 *.o
@@ -50,15 +58,12 @@ config.status
 # Kernel Module Compile Results
 *.mod*
 *.cmd
-.tmp_versions/
 modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-
-# http://www.gnu.org/software/automake
-
+__pycache__
+*.pyc
 Makefile.in
 /ar-lib
 /mdate-sh
@@ -90,3 +95,8 @@ Makefile.in
 # http://www.gnu.org/software/texinfo
 
 /texinfo.tex
+/config.log
+/config.status
+.deps
+Makefile
+config.h
