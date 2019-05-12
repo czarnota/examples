@@ -1,5 +1,4 @@
-obj-m += hellogenl.o
-
+obj-m += generic_netlink_1.o 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
