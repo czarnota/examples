@@ -27,6 +27,8 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
+	/* Send message to kernel module over netlink - this will call
+	   generic_netlink_0_cmd() */
 	ret = genl_send_simple(nl_sock, family_id, GENERIC_NETLINK_0_CMD, 1, 0);
 	if (ret) {
 		nl_socket_free(nl_sock);
