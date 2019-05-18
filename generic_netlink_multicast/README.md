@@ -1,4 +1,4 @@
-# Generic netlink multicates
+# Generic netlink multicast
 One of the simplest possible generic netlink examples with multicast messages
 
 # Check out also:
