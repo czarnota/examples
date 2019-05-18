@@ -6,34 +6,6 @@
 
 #include "generic_netlink_multicast.h"
 
-int send_message(struct nl_sock *sock, int family_id, int cmd, 
-		 std::function<int(struct nl_msg *msg)> filler)
-{
-	auto nlmsg = nlmsg_alloc();
-	if (!nlmsg) {
-		return -1;
-	}
-
-	auto data = genlmsg_put(nlmsg, 0, NL_AUTO_SEQ, family_id, 0, 0, cmd, 0);
-	if (!data) {
-		nlmsg_free(nlmsg);
-		return -1;
-	}
-
-	auto ret = filler(nlmsg);
-	if (ret) {
-		nlmsg_free(nlmsg);
-		return -1;
-	}
-
-	auto result = nl_send_auto(sock, nlmsg);
-	nlmsg_free(nlmsg);
-	if (result >= 0) {
-		return 0;
-	}
-	return -1;
-}
-
 int on_response(struct nl_sock *sock, std::function<void(struct nl_msg *)> on_response)
 {
 	auto nl_cb = nl_socket_get_cb(sock);
