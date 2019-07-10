@@ -1,0 +1,19 @@
+{
+    "name": "hehe/lti",
+    "description": "lti test app",
+    "authors": [
+        {
+            "name": "Przemyslaw Czarnota",
+            "email": "x2n404@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        },
+        "files": [
+            "src/OAuth.php"
+        ]
+    }
+}
